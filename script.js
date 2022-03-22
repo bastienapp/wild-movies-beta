@@ -5,17 +5,16 @@ function createMovieCard(movie) {
 
     const movieTitle = document.createElement('h2');
     movieTitle.textContent = movie.title;
+    movieCard.appendChild(movieTitle);
 
     const moviePoster = document.createElement('img');
     moviePoster.alt = movie.title;
     moviePoster.src = movie.poster;
     moviePoster.classList.add('movie-poster');
+    movieCard.appendChild(moviePoster);
 
     const movieRelease = document.createElement('p');
     movieRelease.textContent = movie.releaseDate;
-
-    movieCard.appendChild(movieTitle);
-    movieCard.appendChild(moviePoster);
     movieCard.appendChild(movieRelease);
 
     return movieCard;
